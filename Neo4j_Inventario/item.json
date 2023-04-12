@@ -1,0 +1,81 @@
+{
+    "clase": "Partida",
+    "partida": "100",
+    "subpartida": "",
+    "categoria": "",
+    "name": "Sillas",
+    "cantidad": "",
+    "estatus": "Disponible",
+    "minimoNivel": -1,
+    "items": [{
+            "clase": "Subpartida",
+			"partida": "100",
+			"subpartida": "110",
+			"categoria": "",
+            "name": "Sillas",
+            "cantidad": "",
+            "estatus": "Disponible",
+            "minimoNivel": -1,
+            "items": [{
+                    "clase": "Categoria",
+					"partida": "100",
+					"subpartida": "110",
+					"categoria": "111",
+                    "name": "Silla ejecutiva clase 1",
+                    "cantidad": "7",
+                    "estatus": "Disponible",
+                    "minimoNivel": 5,
+                    "items": [{
+                            "clase": "Item",
+							"partida": "100",
+							"subpartida": "110",
+							"categoria": "111",
+                            "name": "Silla ejecutiva clase 1",
+                            "cantidad": "1",
+                            "estatus": "Disponible",
+                            "minimoNivel": -1
+                        }, {
+                            "clase": "Item",
+							"partida": "100",
+							"subpartida": "110",
+							"categoria": "111",
+                            "name": "Silla ejecutiva clase 1",
+                            "cantidad": "1",
+                            "estatus": "Disponible",
+                            "minimoNivel": -1
+                        }
+                    ]
+                }, {
+                    "clase": "Categoria",
+							"partida": "100",
+							"subpartida": "110",
+							"categoria": "112",
+                    "name": "Silla ejecutiva clase 2",
+                    "cantidad": "8",
+                    "estatus": "Disponible",
+                    "minimoNivel": 5,
+                    "items": [{
+                            "clase": "Item",
+							"partida": "100",
+							"subpartida": "110",
+							"categoria": "112",
+                            "name": "Silla ejecutiva clase 2",
+                            "cantidad": "1",
+                            "estatus": "Disponible",
+                            "minimoNivel": -1
+                        }, {
+                            "clase": "Item",
+							"partida": "100",
+							"subpartida": "110",
+							"categoria": "112",
+                            "name": "Silla ejecutiva clase 2",
+                            "cantidad": "1",
+                            "estatus": "Disponible",
+                            "minimoNivel": -1
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
