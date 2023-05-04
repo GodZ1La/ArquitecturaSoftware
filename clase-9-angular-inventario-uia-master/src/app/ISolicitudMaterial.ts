@@ -34,4 +34,3 @@ export interface ISolicitudMaterial
 			      namePartida: string,
             nameSubpartida: string,
   }
-

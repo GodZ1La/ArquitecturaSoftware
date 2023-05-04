@@ -7,6 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DatosService } from '../datos.service'
 import { IPartida }  from '../../assets/IPartida'
 import { Router } from '@angular/router';
+import { IItem, ISolicitudMaterial } from '../ISolicitudMaterial';
 @Component({
   selector: 'app-modal-edit',
   templateUrl: './modal-edit.component.html',
@@ -14,18 +15,21 @@ import { Router } from '@angular/router';
 })
 export class ModalEditComponent {
 
-  constructor(
-    public dialogRef: MatDialogRef<ModalEditComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) {}
+  solicitudes: ISolicitudMaterial[] | undefined;
+  items: IItem[] | undefined;
 
-  onNoClick(): void {
-    this.dialogRef.close();
+  constructor(public dialog: MatDialog, private datosSolicitud: DatosService) {
+    this.datosSolicitud.getSolicitudesMaterial().subscribe((data: ISolicitudMaterial[]) => {
+      console.log(data);
+      this.solicitudes = data; // Inicializar la propiedad "solicitudes" con los datos obtenidos del servicio
+    });
+    console.log("en modal");
   }
+  openDialog() {
+    const dialogRef = this.dialog.open(ModalEditComponent);
 
-  onConfirmClick(): void {
-    // Aquí puedes realizar la acción que necesites al confirmar la edición
-    // En este ejemplo, simplemente se cierra el modal
-    this.dialogRef.close();
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
-
 }

@@ -91,23 +91,23 @@
       </thead>
   
       <tbody>
-        <tr *ngFor="let data of data ">
-          <td style="width: 5%;">{{data.id }}</td>
-          <td style="width: 5%;">{{data.idPartida}}</td>
-          <td style="width: 8%;">{{data.idSubpartida}}</td>
-          <td style="width: 10%;">{{data.idCategoria}}</td>
-          <td style="width: 10%;" >{{data.idProveedor}} </td>
-          <td style="width: 10%;">{{data.minimoNivel}} </td>
-          <td style="width: 10%;">{{data.nameCategoria}} </td>
-          <td style="width: 10%;">{{data.nameSubpartida}} </td>
-  
+        <tr *ngFor="let solicitud of solicitudes">
+          <td style="width: 5%;">{{solicitud.id }}</td>
           <td style="width: 5%;">
-            
+            <div *ngFor="let item of solicitud.items">{{item.idPartida}}</div>
           </td>
+          <td style="width: 8%;">
+            <div *ngFor="let item of solicitud.items">{{item.idSubpartida}}</div>
+          </td>
+          <td style="width: 10%;">{{solicitud.idCategoria}}</td>
+          <td style="width: 10%;" >{{solicitud.idProveedor}} </td>
+          <td style="width: 10%;">{{solicitud.minimoNivel}} </td>
+          <td style="width: 10%;">{{solicitud.nameCategoria}} </td>
+          <td style="width: 10%;">
+            <div *ngFor="let item of solicitud.items">{{item.nameSubpartida}}</div>
+          </td>
+          <td style="width: 5%;"></td>
         </tr>
       </tbody>
-  
     </table>
   </div>
-  
-  
